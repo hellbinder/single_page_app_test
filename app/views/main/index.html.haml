@@ -1,0 +1,102 @@
+<!doctype html>
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Dashboard I Admin Panel
+    /[if lt IE 9]
+      <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  %body
+    %header#header
+      %hgroup
+        %h1.site_title
+          %a{:href => "index.html"} Website Admin
+        %h2.section_title Dashboard
+        .btn_view_site
+          %a{:href => "http://www.medialoot.com"} View Site
+    / end of header bar
+    %section#secondary_bar
+      .user
+        %p
+          John Doe (
+          %a{:href => "#"}> 3 Messages
+          )
+        / <a class="logout_user" href="#" title="Logout">Logout</a>
+      .breadcrumbs_container
+        %article.breadcrumbs
+          %a{:href => "index.html"} Website Admin
+          .breadcrumb_divider
+          %a.current Dashboard
+    / end of secondary bar
+    %aside#sidebar.column
+      %form.quick_search
+        %input{:onfocus => "if(!this._haschanged){this.value=''};this._haschanged=true;", :type => "text", :value => "Quick Search"}/
+      %hr/
+      %h3 Content
+      %ul.toggle
+        %li.icn_new_article
+          %a{:href => "#"} New Article
+        %li.icn_edit_article
+          %a{:href => "#"} Edit Articles
+        %li.icn_categories
+          %a{:href => "#"} Categories
+        %li.icn_tags
+          %a{:href => "#"} Tags
+      %h3 Users
+      %ul.toggle
+        %li.icn_add_user
+          %a{:href => "#"} Add New User
+        %li.icn_view_users
+          %a{:href => "#"} View Users
+        %li.icn_profile
+          %a{:href => "#"} Your Profile
+      %h3 Media
+      %ul.toggle
+        %li.icn_folder
+          %a{:href => "#"} File Manager
+        %li.icn_photo
+          %a{:href => "#"} Gallery
+        %li.icn_audio
+          %a{:href => "#"} Audio
+        %li.icn_video
+          %a{:href => "#"} Video
+      %h3 Admin
+      %ul.toggle
+        %li.icn_settings
+          %a{:href => "#"} Options
+        %li.icn_security
+          %a{:href => "#"} Security
+        %li.icn_jump_back
+          %a{:href => "#"} Logout
+      %footer
+        %hr/
+        %p
+          %strong Copyright © 2011 Website Admin
+        %p
+          Theme by
+          %a{:href => "http://www.medialoot.com"} MediaLoot
+    / end of sidebar
+    %section#main.column
+      %h4.alert_info Welcome to the free MediaLoot admin panel template, this could be an informative message.
+      %article.module.width_full
+        %header
+          %h3 Stats
+        .module_content
+          %article.stats_graph
+            %img{:alt => "", :height => "140", :src => "http://chart.apis.google.com/chart?chxr=0,0,3000&chxt=y&chs=520x140&cht=lc&chco=76A4FB,80C65A&chd=s:Tdjpsvyvttmiihgmnrst,OTbdcfhhggcTUTTUadfk&chls=2|2&chma=40,20,20,30", :width => "520"}/
+          %article.stats_overview
+            .overview_today
+              %p.overview_day Today
+              %p.overview_count 1,876
+              %p.overview_type Hits
+              %p.overview_count 2,103
+              %p.overview_type Views
+            .overview_previous
+              %p.overview_day Yesterday
+              %p.overview_count 1,646
+              %p.overview_type Hits
+              %p.overview_count 2,054
+              %p.overview_type Views
+          .clear
+      / end of stats article
+      .spacer
